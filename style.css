@@ -1,0 +1,89 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: url("https://source.unsplash.com/random") no-repeat center/cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 1em;
+  width: 80%;
+  max-width: 500px;
+  margin: 1rem;
+  padding: 1em 1.5em;
+  text-align: center;
+}
+.search {
+  margin: 1rem;
+  max-width: 80%;
+  width: 500px;
+}
+.search input {
+  background-color: #7c7c7c4b;
+  border-radius: 2em;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  width: calc(100% - 50px);
+  padding: 0.7em;
+}
+.search .btn {
+  background-color: #7c7c7c4b;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  transition: 0.2s ease-in-out;
+}
+.search .btn:hover {
+  background-color: #7c7c7c6b;
+}
+.btn i {
+  font-size: 2em;
+}
+.weather .temp {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.weather .humid,
+.weather .wind-speed {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.flex .description {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.weather.loading {
+  display: none;
+  position: relative;
+  max-width: 20px;
+}
+.weather.loading::after {
+  content: "loading...";
+  display: block;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
